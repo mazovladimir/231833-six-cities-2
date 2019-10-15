@@ -1,7 +1,7 @@
 # Личный проект «Шесть городов» [![Build status][travis-image]][travis-url]
 
 * Студент: [Владимир Мазо](https://up.htmlacademy.ru/react/2/user/231833).
-* Наставник: [Danila Manoshkin](https://htmlacademy.ru/profile/id1197595).
+* Наставник: [Данила Маношкин](https://htmlacademy.ru/profile/id1197595).
 
 ---
 
