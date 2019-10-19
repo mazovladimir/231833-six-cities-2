@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import Offer from '../offer/offer.jsx';
+import OffersList from '../offers-list/offers-list.jsx';
 
 const offers = [
   {title: `Beautiful & luxurious apartment at great location`, price: 80},
@@ -152,7 +152,7 @@ class Main extends Component {
                     */}
                   </form>
                   <div className="cities__places-list places__list tabs__content">
-                    <Offer offers={offers} />
+                    <OffersList offers={offers} />
                   </div>
                 </section>
                 <div className="cities__right-section">

@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const offer = ({offers}) => {
+const OffersList = ({offers}) => {
   return offers.map((item) => (
     <article className="cities__place-card place-card" key={item.title}>
       <div className="cities__image-wrapper place-card__image-wrapper">
@@ -46,8 +46,11 @@ const offer = ({offers}) => {
   ));
 };
 
-export default offer;
+export default OffersList;
 
-offer.propTypes = {
-  offers: PropTypes.arrayOf(PropTypes.object)
+OffersList.propTypes = {
+  offers: PropTypes.arrayOf(PropTypes.shape({
+    title: PropTypes.string.isRequired,
+    price: PropTypes.number.isRequired
+  }))
 };
