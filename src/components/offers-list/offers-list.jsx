@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const OffersList = ({offers}) => {
+const OffersList = ({offers, handleClick}) => {
   return offers.map((item) => (
     <article className="cities__place-card place-card" key={item.title}>
       <div className="cities__image-wrapper place-card__image-wrapper">
@@ -38,7 +38,7 @@ const OffersList = ({offers}) => {
           </div>
         </div>
         <h2 className="place-card__name">
-          <a href="#">{item.title}</a>
+          <a href="#" onClick={handleClick}>{item.title}</a>
         </h2>
         <p className="place-card__type">Private room</p>
       </div>
@@ -52,5 +52,6 @@ OffersList.propTypes = {
   offers: PropTypes.arrayOf(PropTypes.shape({
     title: PropTypes.string.isRequired,
     price: PropTypes.number.isRequired
-  }))
+  })),
+  handleClick: PropTypes.func
 };

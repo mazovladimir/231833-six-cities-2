@@ -8,7 +8,16 @@ const offers = [
   {title: `Nice, cozy, warm big bed apartment`, price: 80}
 ];
 
+
 class Main extends Component {
+  constructor(props) {
+    super(props);
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  handleClick() {
+  }
+
   render() {
     return (
       <React.Fragment>
@@ -152,7 +161,7 @@ class Main extends Component {
                     */}
                   </form>
                   <div className="cities__places-list places__list tabs__content">
-                    <OffersList offers={offers} />
+                    <OffersList offers={offers} handleClick={this.handleClick}/>
                   </div>
                 </section>
                 <div className="cities__right-section">
