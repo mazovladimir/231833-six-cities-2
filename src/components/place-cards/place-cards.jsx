@@ -1,9 +1,9 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from "react";
+import PropTypes from "prop-types";
 
-const OffersList = ({offers}) => {
-  return offers.map((item) => (
-    <article className="cities__place-card place-card" key={item.title}>
+const PlaceCard = ({placeCards, handleClick}) => {
+  return placeCards.map((placeCard) => (
+    <article className="cities__place-card place-card" key={placeCard.title}>
       <div className="cities__image-wrapper place-card__image-wrapper">
         <a href="#">
           <img
@@ -18,7 +18,7 @@ const OffersList = ({offers}) => {
       <div className="place-card__info">
         <div className="place-card__price-wrapper">
           <div className="place-card__price">
-            <b className="place-card__price-value">&euro;{item.price}</b>
+            <b className="place-card__price-value">&euro;{placeCard.price}</b>
             <span className="place-card__price-text">&#47;&nbsp;night</span>
           </div>
           <button
@@ -38,7 +38,9 @@ const OffersList = ({offers}) => {
           </div>
         </div>
         <h2 className="place-card__name">
-          <a href="#">{item.title}</a>
+          <a href="#" onClick={handleClick}>
+            {placeCard.title}
+          </a>
         </h2>
         <p className="place-card__type">Private room</p>
       </div>
@@ -46,11 +48,12 @@ const OffersList = ({offers}) => {
   ));
 };
 
-export default OffersList;
+export default PlaceCard;
 
-OffersList.propTypes = {
+PlaceCard.propTypes = {
   offers: PropTypes.arrayOf(PropTypes.shape({
     title: PropTypes.string.isRequired,
-    price: PropTypes.number.isRequired
-  }))
+    price: PropTypes.number.isRequired})
+  ),
+  handleClick: PropTypes.func
 };

@@ -1,7 +1,7 @@
-import React, {Component} from 'react';
-import OffersList from '../offers-list/offers-list.jsx';
+import React, {Component} from "react";
+import PlaceCards from "../place-cards/place-cards.jsx";
 
-const offers = [
+const placeCards = [
   {title: `Beautiful & luxurious apartment at great location`, price: 80},
   {title: `Wood and stone place`, price: 80},
   {title: `Canal View Prinsengracht`, price: 80},
@@ -9,6 +9,13 @@ const offers = [
 ];
 
 class Main extends Component {
+  constructor(props) {
+    super(props);
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  handleClick() {}
+
   render() {
     return (
       <React.Fragment>
@@ -152,7 +159,10 @@ class Main extends Component {
                     */}
                   </form>
                   <div className="cities__places-list places__list tabs__content">
-                    <OffersList offers={offers} />
+                    <PlaceCards
+                      placeCards={placeCards}
+                      handleClick={this.handleClick}
+                    />
                   </div>
                 </section>
                 <div className="cities__right-section">
