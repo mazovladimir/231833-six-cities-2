@@ -1,12 +1,6 @@
 import React, {Component} from "react";
-import PlaceCards from "../place-cards/place-cards.jsx";
-
-const placeCards = [
-  {title: `Beautiful & luxurious apartment at great location`, price: 80},
-  {title: `Wood and stone place`, price: 80},
-  {title: `Canal View Prinsengracht`, price: 80},
-  {title: `Nice, cozy, warm big bed apartment`, price: 80}
-];
+import OffersList from '../offers-list/offers-list.jsx';
+import PropTypes from "prop-types";
 
 class Main extends Component {
   constructor(props) {
@@ -159,10 +153,7 @@ class Main extends Component {
                     */}
                   </form>
                   <div className="cities__places-list places__list tabs__content">
-                    <PlaceCards
-                      placeCards={placeCards}
-                      handleClick={this.handleClick}
-                    />
+                    <OffersList offers={this.props.offers}/>
                   </div>
                 </section>
                 <div className="cities__right-section">
@@ -178,3 +169,13 @@ class Main extends Component {
 }
 
 export default Main;
+
+Main.propTypes = {
+  offers: PropTypes.arrayOf(PropTypes.shape({
+    image: PropTypes.string.isRequired,
+    priceValue: PropTypes.number.isRequired,
+    priceText: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    type: PropTypes.string.isRequired
+  }))
+};

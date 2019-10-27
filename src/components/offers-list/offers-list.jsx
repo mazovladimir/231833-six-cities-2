@@ -1,16 +1,16 @@
 import React from 'react';
-import Main from '../main/main.jsx';
+import OfferCard from '../offer-card/offer-card.jsx';
 import PropTypes from "prop-types";
 
-const App = ({offers}) => {
-  return (
-    <Main offers={offers}/>
-  );
-};
+const OffersList = ({offers}) => (
+  offers.map((offer, index) => (
+    <OfferCard offer={offer} key={`offer-${index}`} />
+  ))
+);
 
-export default App;
+export default OffersList;
 
-App.propTypes = {
+OffersList.propTypes = {
   offers: PropTypes.arrayOf(PropTypes.shape({
     image: PropTypes.string.isRequired,
     priceValue: PropTypes.number.isRequired,
