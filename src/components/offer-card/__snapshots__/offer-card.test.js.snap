@@ -4,6 +4,13 @@ exports[`renders correct OfferCard component 1`] = `
 <article
   className="cities__place-card place-card"
 >
+  <span
+    style={
+      Object {
+        "display": "none",
+      }
+    }
+  />
   <div
     className="cities__image-wrapper place-card__image-wrapper"
   >

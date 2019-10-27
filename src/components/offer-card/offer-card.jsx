@@ -1,9 +1,10 @@
 import React from 'react';
 import PropTypes from "prop-types";
 
-const OfferCard = ({offer: {image, priceValue, priceText, name, type}}) => {
+const OfferCard = ({offer: {image, priceValue, priceText, name, type}, activeCard}) => {
   return (
     <article className="cities__place-card place-card">
+      <span style={{display: `none`}}>{activeCard}</span>
       <div className="cities__image-wrapper place-card__image-wrapper">
         <a href="#">
           <img
@@ -52,6 +53,13 @@ export default OfferCard;
 
 OfferCard.propTypes = {
   offer: PropTypes.shape({
+    image: PropTypes.string.isRequired,
+    priceValue: PropTypes.number.isRequired,
+    priceText: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    type: PropTypes.string.isRequired
+  }),
+  activeCard: PropTypes.shape({
     image: PropTypes.string.isRequired,
     priceValue: PropTypes.number.isRequired,
     priceText: PropTypes.string.isRequired,

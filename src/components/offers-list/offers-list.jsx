@@ -13,7 +13,7 @@ class OffersList extends Component {
   }
 
   mouseOver(offer) {
-    this.setState({activeCard: [offer]});
+    this.setState({activeCard: offer});
   }
 
   mouseOut() {
@@ -25,8 +25,8 @@ class OffersList extends Component {
     return (
       <React.Fragment>
         {offers.map((offer, index) => (
-          <div key={`offer-${index}`} onMouseEnter={this.mouseOver.bind(this, offer)} onMouseLeave={this.mouseOut.bind(this, false)} >
-            <OfferCard offer={offer}/>
+          <div key={`offer-${index}`} onMouseEnter={this.mouseOver.bind(this, offer)} onMouseLeave={this.mouseOut} >
+            <OfferCard offer={offer} activeCard={this.state.activeCard}/>
           </div>
         ))}
       </React.Fragment>
