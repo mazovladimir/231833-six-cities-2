@@ -1,6 +1,6 @@
-import React, {Component} from "react";
+import React, {Component} from 'react';
 import OffersList from '../offers-list/offers-list.jsx';
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types';
 
 class Main extends Component {
   constructor(props) {
