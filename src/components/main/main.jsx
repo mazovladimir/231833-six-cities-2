@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import OffersList from '../offers-list/offers-list.jsx';
+import PlaceCards from '../place-cards/place-cards.jsx';
 import PropTypes from 'prop-types';
 
 class Main extends Component {
@@ -153,7 +153,7 @@ class Main extends Component {
                     */}
                   </form>
                   <div className="cities__places-list places__list tabs__content">
-                    <OffersList offers={this.props.offers}/>
+                    <PlaceCards offers={this.props.offers}/>
                   </div>
                 </section>
                 <div className="cities__right-section">

@@ -2,7 +2,9 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import PlaceCards from './place-cards.jsx';
 
-it(`renders correct placeCards component`, () => {
-  const tree = renderer.create(<PlaceCards placeCards={[{title: `Example Title`, price: 80}]} />).toJSON();
+const offers = [{image: `image`, priceValue: 100, priceText: `text`, name: `name`, type: `type`}];
+
+it(`renders correct PlaceCards component`, () => {
+  const tree = renderer.create(<PlaceCards offers={offers} />).toJSON();
   expect(tree).toMatchSnapshot();
 });

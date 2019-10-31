@@ -1,9 +1,18 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders correct placeCards component 1`] = `
+exports[`renders correct PlaceCards component 1`] = `
 <article
   className="cities__place-card place-card"
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
 >
+  <span
+    style={
+      Object {
+        "display": "none",
+      }
+    }
+  />
   <div
     className="cities__image-wrapper place-card__image-wrapper"
   >
@@ -14,7 +23,7 @@ exports[`renders correct placeCards component 1`] = `
         alt="Place image"
         className="place-card__image"
         height="200"
-        src="img/room.jpg"
+        src="image"
         width="260"
       />
     </a>
@@ -32,12 +41,13 @@ exports[`renders correct placeCards component 1`] = `
           className="place-card__price-value"
         >
           €
-          80
+          100
         </b>
         <span
           className="place-card__price-text"
         >
-          / night
+          / 
+          text
         </span>
       </div>
       <button
@@ -86,13 +96,13 @@ exports[`renders correct placeCards component 1`] = `
       <a
         href="#"
       >
-        Example Title
+        name
       </a>
     </h2>
     <p
       className="place-card__type"
     >
-      Private room
+      type
     </p>
   </div>
 </article>

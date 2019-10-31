@@ -1,9 +1,9 @@
 import React from 'react';
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types';
 
-const OfferCard = ({offer: {image, priceValue, priceText, name, type}, activeCard}) => {
+const PlaceCard = ({offer: {image, priceValue, priceText, name, type}, activeCard, mouseOverHandler, mouseOutHandler}) => {
   return (
-    <article className="cities__place-card place-card">
+    <article className="cities__place-card place-card" onMouseEnter={() => mouseOverHandler()} onMouseLeave={() => mouseOutHandler()}>
       <span style={{display: `none`}}>{activeCard}</span>
       <div className="cities__image-wrapper place-card__image-wrapper">
         <a href="#">
@@ -20,7 +20,9 @@ const OfferCard = ({offer: {image, priceValue, priceText, name, type}, activeCar
         <div className="place-card__price-wrapper">
           <div className="place-card__price">
             <b className="place-card__price-value">&euro;{priceValue}</b>
-            <span className="place-card__price-text">&#47;&nbsp;{priceText}</span>
+            <span className="place-card__price-text">
+              &#47;&nbsp;{priceText}
+            </span>
           </div>
           <button
             className="place-card__bookmark-button place-card__bookmark-button--active button"
@@ -39,9 +41,7 @@ const OfferCard = ({offer: {image, priceValue, priceText, name, type}, activeCar
           </div>
         </div>
         <h2 className="place-card__name">
-          <a href="#">
-            {name}
-          </a>
+          <a href="#">{name}</a>
         </h2>
         <p className="place-card__type">{type}</p>
       </div>
@@ -49,9 +49,9 @@ const OfferCard = ({offer: {image, priceValue, priceText, name, type}, activeCar
   );
 };
 
-export default OfferCard;
+export default PlaceCard;
 
-OfferCard.propTypes = {
+PlaceCard.propTypes = {
   offer: PropTypes.shape({
     image: PropTypes.string.isRequired,
     priceValue: PropTypes.number.isRequired,
@@ -65,5 +65,7 @@ OfferCard.propTypes = {
     priceText: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
     type: PropTypes.string.isRequired
-  })
+  }),
+  mouseOverHandler: PropTypes.func.isRequired,
+  mouseOutHandler: PropTypes.func.isRequired
 };
