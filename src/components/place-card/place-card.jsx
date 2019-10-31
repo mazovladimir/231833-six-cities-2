@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const PlaceCard = ({offer: {image, priceValue, priceText, name, type}, activeCard, mouseOverHandler, mouseOutHandler}) => {
+const PlaceCard = ({offer: {image, priceValue, priceText, name, type}, activeCard, onMouseEnter, onMouseLeave}) => {
   return (
-    <article className="cities__place-card place-card" onMouseEnter={() => mouseOverHandler()} onMouseLeave={() => mouseOutHandler()}>
-      <span style={{display: `none`}}>{activeCard}</span>
+    <article className="cities__place-card place-card" onMouseEnter={() => onMouseEnter()} onMouseLeave={() => onMouseLeave()}>
+      <span style={{display: `none`}}>{activeCard ? true : false}</span>
       <div className="cities__image-wrapper place-card__image-wrapper">
         <a href="#">
           <img
@@ -66,6 +66,6 @@ PlaceCard.propTypes = {
     name: PropTypes.string.isRequired,
     type: PropTypes.string.isRequired
   }),
-  mouseOverHandler: PropTypes.func.isRequired,
-  mouseOutHandler: PropTypes.func.isRequired
+  onMouseEnter: PropTypes.func.isRequired,
+  onMouseLeave: PropTypes.func.isRequired
 };

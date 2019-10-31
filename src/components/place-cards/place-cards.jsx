@@ -29,8 +29,8 @@ class PlaceCards extends Component {
             key={`offer-${index}`}
             offer={offer}
             activeCard={this.state.activeCard}
-            mouseOverHandler={this.mouseOver.bind(this, offer)}
-            mouseOutHandler={this.mouseOut}
+            onMouseEnter={this.mouseOver.bind(this, offer)}
+            onMouseLeave={this.mouseOut}
           />
         ))}
       </React.Fragment>
