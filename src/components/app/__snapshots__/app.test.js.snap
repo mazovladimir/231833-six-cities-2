@@ -266,6 +266,8 @@ Array [
             >
               <article
                 className="cities__place-card place-card"
+                onMouseEnter={[Function]}
+                onMouseLeave={[Function]}
               >
                 <div
                   className="cities__image-wrapper place-card__image-wrapper"
@@ -277,7 +279,7 @@ Array [
                       alt="Place image"
                       className="place-card__image"
                       height="200"
-                      src="img/room.jpg"
+                      src="img/apartment-01.jpg"
                       width="260"
                     />
                   </a>
@@ -295,12 +297,13 @@ Array [
                         className="place-card__price-value"
                       >
                         €
-                        80
+                        120
                       </b>
                       <span
                         className="place-card__price-text"
                       >
-                        / night
+                        / 
+                        night
                       </span>
                     </div>
                     <button
@@ -348,20 +351,21 @@ Array [
                   >
                     <a
                       href="#"
-                      onClick={[Function]}
                     >
-                      Beautiful & luxurious apartment at great location
+                      Beautiful &amp; luxurious apartment at great location
                     </a>
                   </h2>
                   <p
                     className="place-card__type"
                   >
-                    Private room
+                    Apartment
                   </p>
                 </div>
               </article>
               <article
                 className="cities__place-card place-card"
+                onMouseEnter={[Function]}
+                onMouseLeave={[Function]}
               >
                 <div
                   className="cities__image-wrapper place-card__image-wrapper"
@@ -396,7 +400,8 @@ Array [
                       <span
                         className="place-card__price-text"
                       >
-                        / night
+                        / 
+                        night
                       </span>
                     </div>
                     <button
@@ -444,7 +449,6 @@ Array [
                   >
                     <a
                       href="#"
-                      onClick={[Function]}
                     >
                       Wood and stone place
                     </a>
@@ -458,6 +462,8 @@ Array [
               </article>
               <article
                 className="cities__place-card place-card"
+                onMouseEnter={[Function]}
+                onMouseLeave={[Function]}
               >
                 <div
                   className="cities__image-wrapper place-card__image-wrapper"
@@ -469,7 +475,7 @@ Array [
                       alt="Place image"
                       className="place-card__image"
                       height="200"
-                      src="img/room.jpg"
+                      src="img/apartment-02.jpg"
                       width="260"
                     />
                   </a>
@@ -487,12 +493,13 @@ Array [
                         className="place-card__price-value"
                       >
                         €
-                        80
+                        132
                       </b>
                       <span
                         className="place-card__price-text"
                       >
-                        / night
+                        / 
+                        night
                       </span>
                     </div>
                     <button
@@ -540,7 +547,6 @@ Array [
                   >
                     <a
                       href="#"
-                      onClick={[Function]}
                     >
                       Canal View Prinsengracht
                     </a>
@@ -548,12 +554,14 @@ Array [
                   <p
                     className="place-card__type"
                   >
-                    Private room
+                    Apartment
                   </p>
                 </div>
               </article>
               <article
                 className="cities__place-card place-card"
+                onMouseEnter={[Function]}
+                onMouseLeave={[Function]}
               >
                 <div
                   className="cities__image-wrapper place-card__image-wrapper"
@@ -565,7 +573,7 @@ Array [
                       alt="Place image"
                       className="place-card__image"
                       height="200"
-                      src="img/room.jpg"
+                      src="img/apartment-03.jpg"
                       width="260"
                     />
                   </a>
@@ -583,12 +591,13 @@ Array [
                         className="place-card__price-value"
                       >
                         €
-                        80
+                        180
                       </b>
                       <span
                         className="place-card__price-text"
                       >
-                        / night
+                        / 
+                        night
                       </span>
                     </div>
                     <button
@@ -636,7 +645,6 @@ Array [
                   >
                     <a
                       href="#"
-                      onClick={[Function]}
                     >
                       Nice, cozy, warm big bed apartment
                     </a>
@@ -644,7 +652,7 @@ Array [
                   <p
                     className="place-card__type"
                   >
-                    Private room
+                    Apartment
                   </p>
                 </div>
               </article>
