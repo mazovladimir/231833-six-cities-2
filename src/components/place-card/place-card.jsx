@@ -1,15 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const PlaceCard = ({offer: {image, priceValue, priceText, name, type}, activeCard, onMouseEnter, onMouseLeave}) => {
+const PlaceCard = (props) => {
+  const {offer, onMouseEnter, onMouseLeave} = props;
   return (
-    <article className="cities__place-card place-card" onMouseEnter={() => onMouseEnter()} onMouseLeave={() => onMouseLeave()}>
-      <span style={{display: `none`}}>{activeCard ? true : false}</span>
+    <article
+      className="cities__place-card place-card"
+      onMouseEnter={() => onMouseEnter(offer)}
+      onMouseLeave={() => onMouseLeave()}
+    >
       <div className="cities__image-wrapper place-card__image-wrapper">
         <a href="#">
           <img
             className="place-card__image"
-            src={image}
+            src={offer.image}
             width="260"
             height="200"
             alt="Place image"
@@ -19,9 +23,9 @@ const PlaceCard = ({offer: {image, priceValue, priceText, name, type}, activeCar
       <div className="place-card__info">
         <div className="place-card__price-wrapper">
           <div className="place-card__price">
-            <b className="place-card__price-value">&euro;{priceValue}</b>
+            <b className="place-card__price-value">&euro;{offer.priceValue}</b>
             <span className="place-card__price-text">
-              &#47;&nbsp;{priceText}
+              &#47;&nbsp;{offer.priceText}
             </span>
           </div>
           <button
@@ -41,9 +45,9 @@ const PlaceCard = ({offer: {image, priceValue, priceText, name, type}, activeCar
           </div>
         </div>
         <h2 className="place-card__name">
-          <a href="#">{name}</a>
+          <a href="#">{offer.name}</a>
         </h2>
-        <p className="place-card__type">{type}</p>
+        <p className="place-card__type">{offer.type}</p>
       </div>
     </article>
   );

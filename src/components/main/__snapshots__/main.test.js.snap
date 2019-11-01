@@ -269,13 +269,6 @@ Array [
                 onMouseEnter={[Function]}
                 onMouseLeave={[Function]}
               >
-                <span
-                  style={
-                    Object {
-                      "display": "none",
-                    }
-                  }
-                />
                 <div
                   className="cities__image-wrapper place-card__image-wrapper"
                 >

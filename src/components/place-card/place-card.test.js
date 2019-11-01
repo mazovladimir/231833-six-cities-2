@@ -5,8 +5,8 @@ import PlaceCard from './place-card.jsx';
 const offer = {image: `image`, priceValue: 100, priceText: `text`, name: `name`, type: `type`};
 
 it(`renders correct PlaceCard component`, () => {
-  const onMouseLeave = jest.fn();
   const onMouseEnter = jest.fn();
+  const onMouseLeave = jest.fn();
   const component = renderer.create(<PlaceCard offer={offer} onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}/>);
   let tree = component.toJSON();
   expect(tree).toMatchSnapshot();

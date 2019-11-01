@@ -6,13 +6,6 @@ exports[`renders correct PlaceCard component 1`] = `
   onMouseEnter={[Function]}
   onMouseLeave={[Function]}
 >
-  <span
-    style={
-      Object {
-        "display": "none",
-      }
-    }
-  />
   <div
     className="cities__image-wrapper place-card__image-wrapper"
   >
@@ -114,13 +107,6 @@ exports[`renders correct PlaceCard component 2`] = `
   onMouseEnter={[Function]}
   onMouseLeave={[Function]}
 >
-  <span
-    style={
-      Object {
-        "display": "none",
-      }
-    }
-  />
   <div
     className="cities__image-wrapper place-card__image-wrapper"
   >
@@ -222,13 +208,6 @@ exports[`renders correct PlaceCard component 3`] = `
   onMouseEnter={[Function]}
   onMouseLeave={[Function]}
 >
-  <span
-    style={
-      Object {
-        "display": "none",
-      }
-    }
-  />
   <div
     className="cities__image-wrapper place-card__image-wrapper"
   >
