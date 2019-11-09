@@ -179,6 +179,7 @@ Main.propTypes = {
     priceValue: PropTypes.number.isRequired,
     priceText: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
-    type: PropTypes.string.isRequired
+    type: PropTypes.string.isRequired,
+    coordinates: PropTypes.array.isRequired
   }))
 };
