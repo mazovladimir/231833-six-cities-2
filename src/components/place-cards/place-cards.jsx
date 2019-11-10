@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import PlaceCard from '../place-card/place-card.jsx';
+import {offersPropTypes} from '../../prop-types/offers.js';
 import PropTypes from 'prop-types';
 
 class PlaceCards extends Component {
@@ -40,11 +41,5 @@ class PlaceCards extends Component {
 export default PlaceCards;
 
 PlaceCards.propTypes = {
-  offers: PropTypes.arrayOf(PropTypes.shape({
-    image: PropTypes.string.isRequired,
-    priceValue: PropTypes.number.isRequired,
-    priceText: PropTypes.string.isRequired,
-    name: PropTypes.string.isRequired,
-    type: PropTypes.string.isRequired
-  }))
+  offers: PropTypes.arrayOf(offersPropTypes)
 };

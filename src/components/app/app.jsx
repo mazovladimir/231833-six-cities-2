@@ -1,6 +1,6 @@
 import React from 'react';
 import Main from '../main/main.jsx';
-import {offersPropTypes} from '../../prop-types/prop-types';
+import {offersPropTypes} from '../../prop-types/offers.js';
 import PropTypes from 'prop-types';
 
 const App = ({offers}) => {
@@ -12,5 +12,5 @@ const App = ({offers}) => {
 export default App;
 
 App.propTypes = {
-  offers: PropTypes.arrayOf(PropTypes.shape(offersPropTypes))
+  offers: PropTypes.arrayOf(offersPropTypes)
 };

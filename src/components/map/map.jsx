@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import leaflet from 'leaflet';
-import {offersPropTypes} from '../../prop-types/prop-types';
+import {offersPropTypes} from '../../prop-types/offers.js';
 import PropTypes from 'prop-types';
 
 class Map extends Component {
@@ -35,5 +35,5 @@ class Map extends Component {
 export default Map;
 
 Map.propTypes = {
-  offers: PropTypes.arrayOf(PropTypes.shape(offersPropTypes))
+  offers: PropTypes.arrayOf(offersPropTypes)
 };

@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import PlaceCards from '../place-cards/place-cards.jsx';
 import Map from '../map/map.jsx';
-import {offersPropTypes} from '../../prop-types/prop-types';
+import {offersPropTypes} from '../../prop-types/offers.js';
 import PropTypes from 'prop-types';
 
 class Main extends Component {
@@ -175,5 +175,5 @@ class Main extends Component {
 export default Main;
 
 Main.propTypes = {
-  offers: PropTypes.arrayOf(PropTypes.shape(offersPropTypes))
+  offers: PropTypes.arrayOf(offersPropTypes)
 };
