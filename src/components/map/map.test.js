@@ -1,10 +1,10 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import PlaceCards from './place-cards.jsx';
+import Map from './map.jsx';
 
 const offers = [{image: `image`, priceValue: 100, priceText: `text`, name: `name`, type: `type`, coordinates: [1, 2]}];
 
-it(`renders correct PlaceCards component`, () => {
-  const tree = renderer.create(<PlaceCards offers={offers} />).toJSON();
+it(`renders correct map component`, () => {
+  const tree = renderer.create(<Map offers={offers} />).toJSON();
   expect(tree).toMatchSnapshot();
 });

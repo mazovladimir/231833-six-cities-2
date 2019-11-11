@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 import PlaceCards from '../place-cards/place-cards.jsx';
+import Map from '../map/map.jsx';
+import {offersPropTypes} from '../../prop-types/offers.js';
 import PropTypes from 'prop-types';
 
 class Main extends Component {
@@ -153,11 +155,13 @@ class Main extends Component {
                     */}
                   </form>
                   <div className="cities__places-list places__list tabs__content">
-                    <PlaceCards offers={this.props.offers}/>
+                    <PlaceCards offers={this.props.offers} />
                   </div>
                 </section>
                 <div className="cities__right-section">
-                  <section className="cities__map map"></section>
+                  <section className="cities__map map">
+                    <Map offers={this.props.offers} />
+                  </section>
                 </div>
               </div>
             </div>
@@ -171,11 +175,5 @@ class Main extends Component {
 export default Main;
 
 Main.propTypes = {
-  offers: PropTypes.arrayOf(PropTypes.shape({
-    image: PropTypes.string.isRequired,
-    priceValue: PropTypes.number.isRequired,
-    priceText: PropTypes.string.isRequired,
-    name: PropTypes.string.isRequired,
-    type: PropTypes.string.isRequired
-  }))
+  offers: PropTypes.arrayOf(offersPropTypes)
 };

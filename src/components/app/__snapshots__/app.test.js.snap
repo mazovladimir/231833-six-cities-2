@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders correct main component 1`] = `
+exports[`renders correct app component 1`] = `
 Array [
   <div
     style={
@@ -663,7 +663,11 @@ Array [
           >
             <section
               className="cities__map map"
-            />
+            >
+              <div
+                id="map"
+              />
+            </section>
           </div>
         </div>
       </div>

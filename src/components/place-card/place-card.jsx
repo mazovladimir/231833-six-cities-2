@@ -1,4 +1,5 @@
 import React from 'react';
+import {offersPropTypes} from '../../prop-types/offers.js';
 import PropTypes from 'prop-types';
 
 const PlaceCard = (props) => {
@@ -56,20 +57,7 @@ const PlaceCard = (props) => {
 export default PlaceCard;
 
 PlaceCard.propTypes = {
-  offer: PropTypes.shape({
-    image: PropTypes.string.isRequired,
-    priceValue: PropTypes.number.isRequired,
-    priceText: PropTypes.string.isRequired,
-    name: PropTypes.string.isRequired,
-    type: PropTypes.string.isRequired
-  }),
-  activeCard: PropTypes.shape({
-    image: PropTypes.string.isRequired,
-    priceValue: PropTypes.number.isRequired,
-    priceText: PropTypes.string.isRequired,
-    name: PropTypes.string.isRequired,
-    type: PropTypes.string.isRequired
-  }),
+  offer: offersPropTypes,
   onMouseEnter: PropTypes.func.isRequired,
   onMouseLeave: PropTypes.func.isRequired
 };
